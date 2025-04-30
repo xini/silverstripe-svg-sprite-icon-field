@@ -2,9 +2,7 @@
     "name": "innoweb/silverstripe-svg-sprite-icon-field",
     "description": "Adds an icon selector field to Silverstripe that uses an SVG sprite.",
     "type": "silverstripe-vendormodule",
-    "keywords": ["silverstripe", "field", "svg", "svg-sprite", "icon",
-        "client/icons"
-    ],
+    "keywords": ["silverstripe", "field", "svg", "svg-sprite", "icon", "icons"],
     "license": "BSD-3-Clause",
     "authors": [{
         "name": "Florian Thoma",
