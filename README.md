@@ -1,4 +1,4 @@
-# International Phone Number Field
+# SVG Sprite Icon Field
 
 [![Version](https://img.shields.io/packagist/v/innoweb/silverstripe-svg-sprite-icon-field.svg?style=flat-square)](https://packagist.org/packages/innoweb/silverstripe-svg-sprite-icon-field)
 [![License](https://img.shields.io/packagist/l/innoweb/silverstripe-svg-sprite-icon-field.svg?style=flat-square)](license.md)
