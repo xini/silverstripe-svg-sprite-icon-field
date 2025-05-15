@@ -2,7 +2,9 @@
 
 namespace Innoweb\SvgSpriteIconField;
 
+use SilverStripe\Core\Config\Config;
 use SilverStripe\Core\Manifest\ModuleResourceLoader;
+use SilverStripe\ORM\Connect\MySQLDatabase;
 use SilverStripe\ORM\DB;
 use SilverStripe\ORM\FieldType\DBField;
 
@@ -24,7 +26,23 @@ class Icon extends DBField
 
     public function requireField()
     {
-        DB::require_field($this->tableName, $this->name, 'Varchar(255)');
+        $charset = Config::inst()->get(MySQLDatabase::class, 'charset');
+        $collation = Config::inst()->get(MySQLDatabase::class, 'collation');
+
+        $parts = [
+            'datatype' => 'varchar',
+            'precision' => 255,
+            'character set' => $charset,
+            'collate' => $collation,
+            'arrayValue' => $this->arrayValue
+        ];
+
+        $values = [
+            'type' => 'varchar',
+            'parts' => $parts
+        ];
+
+        DB::require_field($this->tableName, $this->name, $values);
     }
 
     public function forTemplate()
